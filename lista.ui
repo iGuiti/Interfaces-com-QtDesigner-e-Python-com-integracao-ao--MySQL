@@ -6,369 +6,376 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>915</width>
-    <height>607</height>
+    <width>1149</width>
+    <height>791</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    border-image: url(:/fundo.png) 0 0 0 0 stretch stretch;
+}</string>
+   </property>
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>581</width>
-      <height>411</height>
+      <x>60</x>
+      <y>190</y>
+      <width>1021</width>
+      <height>541</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="whatsThis">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">Text-align: center</string>
+     <string notr="true">QFrame {
+    background-color: rgba(10, 15, 35, 170);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,30);
+}</string>
     </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAsNeeded</enum>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAsNeeded</enum>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QAbstractScrollArea::AdjustIgnored</enum>
-    </property>
-    <property name="gridStyle">
-     <enum>Qt::SolidLine</enum>
-    </property>
-    <attribute name="horizontalHeaderVisible">
-     <bool>true</bool>
-    </attribute>
-    <attribute name="horizontalHeaderCascadingSectionResizes">
-     <bool>false</bool>
-    </attribute>
-    <attribute name="horizontalHeaderMinimumSectionSize">
-     <number>39</number>
-    </attribute>
-    <attribute name="horizontalHeaderHighlightSections">
-     <bool>true</bool>
-    </attribute>
-    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-     <bool>false</bool>
-    </attribute>
-    <attribute name="verticalHeaderDefaultSectionSize">
-     <number>30</number>
-    </attribute>
-    <attribute name="verticalHeaderHighlightSections">
-     <bool>true</bool>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>CPF</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Cliente</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Telefone</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Aparelho</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Finalizado</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>0</y>
-      <width>271</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../Logo3.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableWidget {
+    background-color: rgba(5, 10, 35, 180);
+    color: white;
+    border: 1px solid rgba(255,255,255,40);
+    border-radius: 12px;
+    gridline-color: rgba(255,255,255,25);
+    font-size: 14px;
+    selection-background-color: rgba(80, 70, 255, 180);
+    selection-color: white;
+    padding: 6px;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255,255,255,20);
+}
+
+QTableWidget::item:selected {
+    background-color: rgba(80, 70, 255, 180);
+    color: white;
+}
+
+QHeaderView::section {
+    background-color: rgba(30, 35, 70, 220);
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QTableCornerButton::section {
+    background-color: rgba(30, 35, 70, 220);
+    border: none;
+}</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>39</number>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>30</number>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>CPF</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Cliente</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Telefone</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Aparelho</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Finalizado</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::WinPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#ffffff;&quot;&gt;CPF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtBuscarCpf">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnBuscar">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(255,255,255);
+background-color: rgb(57, 42, 214);</string>
+       </property>
+       <property name="text">
+        <string>Buscar cadastro</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="btnAtt">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255,255,255);
+background-color: rgb(57, 42, 214);</string>
+         </property>
+         <property name="text">
+          <string>Atualizar cadastro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnApagar">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255,255,255);
+background-color: rgb(255, 57, 39);</string>
+         </property>
+         <property name="text">
+          <string>Apagar cadastro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblApagado">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-10</x>
+      <x>420</x>
       <y>0</y>
-      <width>931</width>
-      <height>561</height>
+      <width>371</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../Fundo.png</pixmap>
+     <pixmap resource="imagens1.qrc">:/logo_connect.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
-   </widget>
-   <widget class="QPushButton" name="btnAtt">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>130</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(255,255,255);
-background-color: rgb(57, 42, 214);</string>
-    </property>
-    <property name="text">
-     <string>Atualizar cadastro</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnApagar">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>130</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(255,255,255);
-background-color: rgb(255, 57, 39);</string>
-    </property>
-    <property name="text">
-     <string>Apagar cadastro</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>230</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="lineWidth">
-     <number>1</number>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#ffffff;&quot;&gt;CPF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtBuscarCpf">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>230</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnBuscar">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>270</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(255,255,255);
-background-color: rgb(57, 42, 214);</string>
-    </property>
-    <property name="text">
-     <string>Buscar cadastro</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lblApagado">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>380</y>
-      <width>311</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tw Cen MT</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <zorder>label</zorder>
-   <zorder>tableWidget</zorder>
-   <zorder>label_2</zorder>
-   <zorder>btnAtt</zorder>
-   <zorder>btnApagar</zorder>
-   <zorder>label_3</zorder>
-   <zorder>txtBuscarCpf</zorder>
-   <zorder>btnBuscar</zorder>
-   <zorder>lblApagado</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>915</width>
+     <width>1149</width>
      <height>21</height>
     </rect>
    </property>
@@ -376,7 +383,7 @@ background-color: rgb(57, 42, 214);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="imgs.qrc"/>
+  <include location="imagens1.qrc"/>
  </resources>
  <connections/>
 </ui>

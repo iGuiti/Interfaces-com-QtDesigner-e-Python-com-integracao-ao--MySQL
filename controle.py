@@ -1,7 +1,11 @@
 import re
 import sys
+import os
 from PyQt5 import QtWidgets, uic
 import mysql.connector
+import resources_rc
+from PyQt5.QtWidgets import QHeaderView
+from PyQt5.QtGui import QIcon
 
 # Conexão com o host e o data base que irão armazenar os dados
 conexao = mysql.connector.connect(
@@ -13,10 +17,6 @@ conexao = mysql.connector.connect(
 num_id = 0
 
 def validar(cpf,nome,telefone,aparelho):
-    cpf = Formulario.txtCpf.text()
-    nome = Formulario.txtCliente.text()
-    telefone = Formulario.txtFone.text()
-    aparelho = Formulario.txtAparelho.text()
 
      # Verifica se os campos estão vazios
     if not cpf or not nome or not telefone or not aparelho:
@@ -29,10 +29,9 @@ def validar(cpf,nome,telefone,aparelho):
     # Verifica se o telefone contém apenas números (você pode ajustar conforme a necessidade)
     if not re.match("^[0-9]+$", telefone):
         return "O telefone deve conter apenas números."
-
-    # Todos os dados são válidos
+    
     return None
-
+    
 # Função para realizar buscas no banco pelo cpf cadastrado
 def buscar ():
     cursor = conexao.cursor()
@@ -103,6 +102,12 @@ def Confirmar_alteracoes():
 # Função para abrir a UI lista, atribuida ao botão "Relatório"
 def listar():
     lista.show()
+
+
+    lista.tableWidget.setSelectionBehavior(QtWidgets.QTableWidget.SelectRows)
+    lista.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+    lista.tableWidget.verticalHeader().setVisible(False)
+    
     cursor = conexao.cursor()
     comandos_SQL = 'select * from clientes'
     cursor.execute(comandos_SQL)
@@ -124,7 +129,8 @@ def insert():
 
     erro = validar(cpf,nome,telefone,aparelho)
     if erro:
-        (erro)
+        Formulario.lblConfirmar.setStyleSheet("color: red; font-weight: bold;")
+        Formulario.lblConfirmar.setText(erro)
         return
     cursor = conexao.cursor()
     comandos_Sql = 'insert into clientes (cpf, nome, telefone, aparelho) values (%s, %s, %s, %s)'
@@ -136,13 +142,20 @@ def insert():
     Formulario.txtCliente.setText('')
     Formulario.txtFone.setText('')
     Formulario.txtAparelho.setText('')
-    Formulario.lblConfirmar.setText('DADOS INSERIDOS!')
+    Formulario.lblConfirmar.setStyleSheet("color: green; font-weight: bold;")
+    Formulario.lblConfirmar.setText("DADOS INSERIDOS!")
+
+def caminho_arquivo(nome):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, nome)
+    return os.path.join(os.path.abspath("."), nome)
 
 # Aplicação para carregar e abrir as interfaces (UI)
 app = QtWidgets.QApplication([])
-Formulario = uic.loadUi('FormCNN.ui')
-lista = uic.loadUi('lista.ui')
-Alterar = uic.loadUi('alterar.ui')
+Formulario = uic.loadUi(caminho_arquivo('FormCNN.ui'))
+lista = uic.loadUi(caminho_arquivo('lista.ui'))
+Alterar = uic.loadUi(caminho_arquivo('alterar.ui'))
+app.setWindowIcon(QIcon(caminho_arquivo('icone_logo.ico')))
 
 # Aplicação para dar funcionalidade aos botões(Btn), chamando as funções que eles devem executar
 Formulario.btnCadastrar.clicked.connect(insert)
